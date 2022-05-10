@@ -1,3 +1,6 @@
+from selenium import webdriver
+
+
 def cc(name: str, data):
     try:
         print("=============================================================")
@@ -10,6 +13,6 @@ def cc(name: str, data):
         print(e)
 
 
-def get_user_agent(driver):
+def get_user_agent(driver: webdriver.Chrome):
     user_agent = driver.execute_script('return navigator.userAgent')
     print(user_agent)
